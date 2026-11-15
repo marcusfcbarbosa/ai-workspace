@@ -15,3 +15,7 @@ C:\Users\Usuário\OneDrive\Documentos\AI Demos\ai-workspace\backend\src\AiWorksp
 C:\Users\Usuário\OneDrive\Documentos\AI Demos\ai-workspace\backend\src\AiWorkspace.Infrastructure\obj\Debug\net9.0\refint\AiWorkspace.Infrastructure.dll
 C:\Users\Usuário\OneDrive\Documentos\AI Demos\ai-workspace\backend\src\AiWorkspace.Infrastructure\obj\Debug\net9.0\AiWorkspace.Infrastructure.pdb
 C:\Users\Usuário\OneDrive\Documentos\AI Demos\ai-workspace\backend\src\AiWorkspace.Infrastructure\obj\Debug\net9.0\ref\AiWorkspace.Infrastructure.dll
+C:\Users\Usuário\OneDrive\Documentos\AI Demos\ai-workspace\backend\src\AiWorkspace.Infrastructure\obj\Debug\net9.0\AiWorkspace.Infrastructure.sourcelink.json
+C:\Users\Usuário\OneDrive\Documentos\AI Demos\ai-workspace\backend\src\AiWorkspace.Infrastructure\bin\Debug\net9.0\AiWorkspace.Infrastructure.runtimeconfig.json
+C:\Users\Usuário\OneDrive\Documentos\AI Demos\ai-workspace\backend\src\AiWorkspace.Infrastructure\obj\Debug\net9.0\EFCoreNpgsqlPgvector.cs
+C:\Users\Usuário\OneDrive\Documentos\AI Demos\ai-workspace\backend\src\AiWorkspace.Infrastructure\obj\Debug\net9.0\AiWorkspace.Infrastructure.genruntimeconfig.cache

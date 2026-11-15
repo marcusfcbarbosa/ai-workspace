@@ -96,3 +96,4 @@ C:\Users\Usuário\OneDrive\Documentos\AI Demos\ai-workspace\backend\tests\AiWork
 C:\Users\Usuário\OneDrive\Documentos\AI Demos\ai-workspace\backend\tests\AiWorkspace.UnitTests\obj\Debug\net9.0\AiWorkspace.UnitTests.pdb
 C:\Users\Usuário\OneDrive\Documentos\AI Demos\ai-workspace\backend\tests\AiWorkspace.UnitTests\obj\Debug\net9.0\AiWorkspace.UnitTests.genruntimeconfig.cache
 C:\Users\Usuário\OneDrive\Documentos\AI Demos\ai-workspace\backend\tests\AiWorkspace.UnitTests\obj\Debug\net9.0\ref\AiWorkspace.UnitTests.dll
+C:\Users\Usuário\OneDrive\Documentos\AI Demos\ai-workspace\backend\tests\AiWorkspace.UnitTests\obj\Debug\net9.0\AiWorkspace.UnitTests.sourcelink.json

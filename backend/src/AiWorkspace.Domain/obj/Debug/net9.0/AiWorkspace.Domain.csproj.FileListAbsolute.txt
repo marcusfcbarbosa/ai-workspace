@@ -9,3 +9,4 @@ C:\Users\Usuário\OneDrive\Documentos\AI Demos\ai-workspace\backend\src\AiWorksp
 C:\Users\Usuário\OneDrive\Documentos\AI Demos\ai-workspace\backend\src\AiWorkspace.Domain\obj\Debug\net9.0\refint\AiWorkspace.Domain.dll
 C:\Users\Usuário\OneDrive\Documentos\AI Demos\ai-workspace\backend\src\AiWorkspace.Domain\obj\Debug\net9.0\AiWorkspace.Domain.pdb
 C:\Users\Usuário\OneDrive\Documentos\AI Demos\ai-workspace\backend\src\AiWorkspace.Domain\obj\Debug\net9.0\ref\AiWorkspace.Domain.dll
+C:\Users\Usuário\OneDrive\Documentos\AI Demos\ai-workspace\backend\src\AiWorkspace.Domain\obj\Debug\net9.0\AiWorkspace.Domain.sourcelink.json

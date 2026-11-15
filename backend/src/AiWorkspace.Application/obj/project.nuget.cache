@@ -1,8 +1,22 @@
 {
   "version": 2,
-  "dgSpecHash": "JljMmTQSlA8=",
+  "dgSpecHash": "s5+ud/C9X6c=",
   "success": true,
   "projectFilePath": "C:\\Users\\Usuário\\OneDrive\\Documentos\\AI Demos\\ai-workspace\\backend\\src\\AiWorkspace.Application\\AiWorkspace.Application.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Usuário\\.nuget\\packages\\fluentvalidation\\12.2.0\\fluentvalidation.12.2.0.nupkg.sha512",
+    "C:\\Users\\Usuário\\.nuget\\packages\\microsoft.extensions.ai\\11.0.0\\microsoft.extensions.ai.11.0.0.nupkg.sha512",
+    "C:\\Users\\Usuário\\.nuget\\packages\\microsoft.extensions.ai.abstractions\\11.0.0\\microsoft.extensions.ai.abstractions.11.0.0.nupkg.sha512",
+    "C:\\Users\\Usuário\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\10.0.15\\microsoft.extensions.caching.abstractions.10.0.15.nupkg.sha512",
+    "C:\\Users\\Usuário\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\10.0.15\\microsoft.extensions.dependencyinjection.abstractions.10.0.15.nupkg.sha512",
+    "C:\\Users\\Usuário\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\10.0.15\\microsoft.extensions.logging.abstractions.10.0.15.nupkg.sha512",
+    "C:\\Users\\Usuário\\.nuget\\packages\\microsoft.extensions.primitives\\10.0.15\\microsoft.extensions.primitives.10.0.15.nupkg.sha512",
+    "C:\\Users\\Usuário\\.nuget\\packages\\system.diagnostics.diagnosticsource\\10.0.15\\system.diagnostics.diagnosticsource.10.0.15.nupkg.sha512",
+    "C:\\Users\\Usuário\\.nuget\\packages\\system.io.pipelines\\10.0.15\\system.io.pipelines.10.0.15.nupkg.sha512",
+    "C:\\Users\\Usuário\\.nuget\\packages\\system.numerics.tensors\\10.0.15\\system.numerics.tensors.10.0.15.nupkg.sha512",
+    "C:\\Users\\Usuário\\.nuget\\packages\\system.text.encodings.web\\10.0.15\\system.text.encodings.web.10.0.15.nupkg.sha512",
+    "C:\\Users\\Usuário\\.nuget\\packages\\system.text.json\\10.0.15\\system.text.json.10.0.15.nupkg.sha512",
+    "C:\\Users\\Usuário\\.nuget\\packages\\system.threading.channels\\10.0.15\\system.threading.channels.10.0.15.nupkg.sha512"
+  ],
   "logs": []
 }

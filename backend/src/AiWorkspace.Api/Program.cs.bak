@@ -1,0 +1,77 @@
+
+var builder = WebApplication.CreateBuilder(args);
+
+// OpenAPI and Swagger
+builder.Services.AddOpenApi();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+// CORS for Angular
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AngularDevelopment", policy =>
+    {
+        policy.WithOrigins("http://localhost:4200")
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
+});
+
+var app = builder.Build();
+
+// Swagger configuration
+if (app.Environment.IsDevelopment())
+{
+    app.MapOpenApi();
+    app.UseSwagger();
+    app.UseSwaggerUI(options =>
+    {
+        options.SwaggerEndpoint(
+            "/swagger/v1/swagger.json",
+            "AI Workspace API v1"
+        );
+    });
+}
+
+app.UseCors("AngularDevelopment");
+
+// Enable HTTPS redirection outside local development
+if (!app.Environment.IsDevelopment())
+{
+    app.UseHttpsRedirection();
+}
+
+// Health check
+app.MapGet("/api/health", () =>
+{
+    return Results.Ok(new
+    {
+        Status = "Healthy",
+        Application = "AI Workspace API",
+        Timestamp = DateTimeOffset.UtcNow
+    });
+})
+.WithName("GetHealth")
+.WithTags("Health");
+
+// Sample endpoint
+app.MapGet("/api/system/info", () =>
+{
+    return Results.Ok(new
+    {
+        Application = "AI Workspace",
+        Version = "1.0.0",
+        Framework = ".NET 9",
+        Modules = new[]
+        {
+            "AI Agents",
+            "MCP Server",
+            "Tools",
+            "RAG"
+        }
+    });
+})
+.WithName("GetSystemInfo")
+.WithTags("System");
+
+app.Run();
