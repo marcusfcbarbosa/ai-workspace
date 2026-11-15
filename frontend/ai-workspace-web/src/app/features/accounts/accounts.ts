@@ -1,9 +1,16 @@
 import { Component } from '@angular/core';
 
 @Component({
-  imports: [],
   selector: 'app-accounts',
-  styleUrl: './accounts.css',
+  standalone: true,
   templateUrl: './accounts.html',
 })
-export class Accounts {}
+export class Accounts {
+  readonly columns = [
+    'Account Number',
+    'Account Owner',
+    'Currency',
+    'Balance',
+    'Status',
+  ];
+}
