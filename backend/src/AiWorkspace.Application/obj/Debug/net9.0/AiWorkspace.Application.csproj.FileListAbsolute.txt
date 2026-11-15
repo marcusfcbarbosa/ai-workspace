@@ -1,0 +1,15 @@
+C:\Users\Usuário\OneDrive\Documentos\AI Demos\ai-workspace\backend\src\AiWorkspace.Application\bin\Debug\net9.0\AiWorkspace.Application.deps.json
+C:\Users\Usuário\OneDrive\Documentos\AI Demos\ai-workspace\backend\src\AiWorkspace.Application\bin\Debug\net9.0\AiWorkspace.Application.dll
+C:\Users\Usuário\OneDrive\Documentos\AI Demos\ai-workspace\backend\src\AiWorkspace.Application\bin\Debug\net9.0\AiWorkspace.Application.pdb
+C:\Users\Usuário\OneDrive\Documentos\AI Demos\ai-workspace\backend\src\AiWorkspace.Application\bin\Debug\net9.0\AiWorkspace.Domain.dll
+C:\Users\Usuário\OneDrive\Documentos\AI Demos\ai-workspace\backend\src\AiWorkspace.Application\bin\Debug\net9.0\AiWorkspace.Domain.pdb
+C:\Users\Usuário\OneDrive\Documentos\AI Demos\ai-workspace\backend\src\AiWorkspace.Application\obj\Debug\net9.0\AiWorkspace.Application.csproj.AssemblyReference.cache
+C:\Users\Usuário\OneDrive\Documentos\AI Demos\ai-workspace\backend\src\AiWorkspace.Application\obj\Debug\net9.0\AiWorkspace.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuário\OneDrive\Documentos\AI Demos\ai-workspace\backend\src\AiWorkspace.Application\obj\Debug\net9.0\AiWorkspace.Application.AssemblyInfoInputs.cache
+C:\Users\Usuário\OneDrive\Documentos\AI Demos\ai-workspace\backend\src\AiWorkspace.Application\obj\Debug\net9.0\AiWorkspace.Application.AssemblyInfo.cs
+C:\Users\Usuário\OneDrive\Documentos\AI Demos\ai-workspace\backend\src\AiWorkspace.Application\obj\Debug\net9.0\AiWorkspace.Application.csproj.CoreCompileInputs.cache
+C:\Users\Usuário\OneDrive\Documentos\AI Demos\ai-workspace\backend\src\AiWorkspace.Application\obj\Debug\net9.0\AiWorksp.89D9523D.Up2Date
+C:\Users\Usuário\OneDrive\Documentos\AI Demos\ai-workspace\backend\src\AiWorkspace.Application\obj\Debug\net9.0\AiWorkspace.Application.dll
+C:\Users\Usuário\OneDrive\Documentos\AI Demos\ai-workspace\backend\src\AiWorkspace.Application\obj\Debug\net9.0\refint\AiWorkspace.Application.dll
+C:\Users\Usuário\OneDrive\Documentos\AI Demos\ai-workspace\backend\src\AiWorkspace.Application\obj\Debug\net9.0\AiWorkspace.Application.pdb
+C:\Users\Usuário\OneDrive\Documentos\AI Demos\ai-workspace\backend\src\AiWorkspace.Application\obj\Debug\net9.0\ref\AiWorkspace.Application.dll

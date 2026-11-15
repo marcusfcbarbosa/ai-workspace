@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "AiWorkspace.Application/1.0.0": {
+        "dependencies": {
+          "AiWorkspace.Domain": "1.0.0"
+        },
+        "runtime": {
+          "AiWorkspace.Application.dll": {}
+        }
+      },
+      "AiWorkspace.Domain/1.0.0": {
+        "runtime": {
+          "AiWorkspace.Domain.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AiWorkspace.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AiWorkspace.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
