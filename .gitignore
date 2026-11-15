@@ -1,0 +1,41 @@
+﻿# Visual Studio
+.vs/
+**/.vs/
+*.vsidx
+*.suo
+*.user
+
+# .NET
+**/bin/
+**/obj/
+**/TestResults/
+
+# SQLite
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+
+# Local secrets
+**/appsettings.Development.local.json
+.env
+.env.*
+!.env.example
+
+# Node.js / Angular
+**/node_modules/
+**/dist/
+**/.angular/
+**/coverage/
+
+# IDE
+.idea/
+.vscode/
+
+# Logs
+*.log
+
+# Operating system
+Thumbs.db
+.DS_Store

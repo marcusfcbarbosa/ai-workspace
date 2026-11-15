@@ -1,10 +1,12 @@
 
 using AiWorkspace.Application.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AiWorkspace.Api.Controllers;
 
 [ApiController]
+[Authorize]
 [Route("api/agents")]
 public sealed class AgentsController : ControllerBase
 {
@@ -24,7 +26,9 @@ public sealed class AgentsController : ControllerBase
             {
                 Id = "customer-onboarding",
                 Name = "Customer Onboarding Agent",
-                Description = "Banking customer registration assistant"
+                Description = "Rule-based banking onboarding assistant",
+                ExecutionMode = "Deterministic",
+                RequiresLlm = false
             }
         });
     }
@@ -34,7 +38,8 @@ public sealed class AgentsController : ControllerBase
         [FromBody] OnboardingChatRequest request,
         CancellationToken cancellationToken)
     {
-        if (string.IsNullOrWhiteSpace(request.Message))
+        if (request is null ||
+            string.IsNullOrWhiteSpace(request.Message))
         {
             return BadRequest(new
             {

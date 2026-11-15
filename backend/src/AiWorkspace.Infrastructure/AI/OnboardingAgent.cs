@@ -1,104 +1,148 @@
 
-using System.Net.Http.Headers;
-using System.Net.Http.Json;
-using System.Text.Json;
 using AiWorkspace.Application.Interfaces;
-using Microsoft.Extensions.Configuration;
 
 namespace AiWorkspace.Infrastructure.AI;
 
 public sealed class OnboardingAgent : IOnboardingAgent
 {
-    private readonly HttpClient _httpClient;
-    private readonly IConfiguration _configuration;
-
-    public OnboardingAgent(
-        HttpClient httpClient,
-        IConfiguration configuration)
-    {
-        _httpClient = httpClient;
-        _configuration = configuration;
-    }
-
-    public async Task<string> ProcessAsync(
+    public Task<string> ProcessAsync(
         string message,
         CancellationToken cancellationToken = default)
     {
+        cancellationToken.ThrowIfCancellationRequested();
+
         if (string.IsNullOrWhiteSpace(message))
+        {
             throw new ArgumentException(
                 "Message cannot be empty.",
                 nameof(message));
-
-        var apiKey = _configuration["OpenAI:ApiKey"];
-
-        if (string.IsNullOrWhiteSpace(apiKey))
-            throw new InvalidOperationException(
-                "OpenAI API key is not configured.");
-
-        var model = _configuration["OpenAI:Model"]
-            ?? "gpt-4.1-mini";
-
-        using var request = new HttpRequestMessage(
-            HttpMethod.Post,
-            "https://api.openai.com/v1/responses");
-
-        request.Headers.Authorization =
-            new AuthenticationHeaderValue("Bearer", apiKey);
-
-        request.Content = JsonContent.Create(new
-        {
-            model,
-            instructions = """
-                You are a banking customer onboarding assistant.
-
-                Help customers understand account registration.
-
-                This is a simulated banking application.
-
-                Never claim that an account has been created.
-                Never claim that identity verification is complete.
-                Never execute financial transactions.
-                Never request passwords or banking credentials.
-
-                Explain what information is needed and
-                ask for missing details one step at a time.
-                """,
-            input = message,
-            max_output_tokens = 600,
-            store = false
-        });
-
-        using var response = await _httpClient.SendAsync(
-            request,
-            cancellationToken);
-
-        response.EnsureSuccessStatusCode();
-
-        using var document = await JsonDocument.ParseAsync(
-            await response.Content.ReadAsStreamAsync(
-                cancellationToken),
-            cancellationToken: cancellationToken);
-
-        var output = document.RootElement
-            .GetProperty("output");
-
-        foreach (var item in output.EnumerateArray())
-        {
-            if (!item.TryGetProperty("content", out var content))
-                continue;
-
-            foreach (var part in content.EnumerateArray())
-            {
-                if (part.TryGetProperty("type", out var type)
-                    && type.GetString() == "output_text"
-                    && part.TryGetProperty("text", out var text))
-                {
-                    return text.GetString() ?? string.Empty;
-                }
-            }
         }
 
-        throw new InvalidOperationException(
-            "OpenAI did not return a text response.");
+        var input = message.Trim().ToLowerInvariant();
+
+        string response;
+
+        if (ContainsAny(input,
+            "business account",
+            "business bank account",
+            "company account",
+            "corporate account"))
+        {
+            response = """
+                To open a business bank account, you typically need:
+
+                1. Registered company name and business registration number.
+                2. Registered business address.
+                3. Company ownership information.
+                4. Identification of authorized representatives.
+                5. Supporting business registration documents.
+
+                Requirements vary by institution and jurisdiction.
+
+                This is a demonstration application.
+                No bank account has been created.
+                """;
+        }
+        else if (ContainsAny(input,
+            "personal account",
+            "individual account",
+            "checking account",
+            "current account"))
+        {
+            response = """
+                To open a personal bank account, you typically need:
+
+                1. Your full legal name.
+                2. A valid identification document.
+                3. Your residential address.
+                4. Contact information.
+                5. Additional information required by the institution.
+
+                This is a demonstration application.
+                No identity verification has been performed.
+                """;
+        }
+        else if (ContainsAny(input,
+            "documents",
+            "documentation",
+            "requirements",
+            "required information"))
+        {
+            response = """
+                Account opening requirements depend on the account type.
+
+                For personal accounts, identification and address
+                information are commonly required.
+
+                For business accounts, company registration,
+                ownership and representative information may
+                also be required.
+
+                Would you like information about a personal
+                or business account?
+                """;
+        }
+        else if (ContainsAny(input,
+            "status",
+            "application progress",
+            "track application"))
+        {
+            response = """
+                This demonstration does not currently track
+                account opening applications.
+
+                No application status can be verified.
+
+                A future workflow could retrieve application
+                status from the banking database.
+                """;
+        }
+        else if (ContainsAny(input,
+            "hello",
+            "hi",
+            "good morning",
+            "good afternoon"))
+        {
+            response = """
+                Hello! Welcome to the banking onboarding demo.
+
+                I can provide general information about
+                personal accounts, business accounts,
+                required documents and onboarding workflows.
+
+                How can I help you today?
+                """;
+        }
+        else
+        {
+            response = """
+                I can help with general banking onboarding information.
+
+                Available topics include:
+
+                - Personal account opening
+                - Business account opening
+                - Required documentation
+                - Onboarding process information
+
+                Please specify which topic you would like
+                to explore.
+
+                This service uses predefined business rules
+                and does not process requests using an LLM.
+                """;
+        }
+
+        return Task.FromResult(response);
+    }
+
+    private static bool ContainsAny(
+        string input,
+        params string[] keywords)
+    {
+        return keywords.Any(keyword =>
+            input.Contains(
+                keyword,
+                StringComparison.OrdinalIgnoreCase));
     }
 }

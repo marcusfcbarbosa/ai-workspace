@@ -10,3 +10,16 @@ C:\Users\Usuário\OneDrive\Documentos\AI Demos\ai-workspace\backend\src\AiWorksp
 C:\Users\Usuário\OneDrive\Documentos\AI Demos\ai-workspace\backend\src\AiWorkspace.Domain\obj\Debug\net9.0\AiWorkspace.Domain.pdb
 C:\Users\Usuário\OneDrive\Documentos\AI Demos\ai-workspace\backend\src\AiWorkspace.Domain\obj\Debug\net9.0\ref\AiWorkspace.Domain.dll
 C:\Users\Usuário\OneDrive\Documentos\AI Demos\ai-workspace\backend\src\AiWorkspace.Domain\obj\Debug\net9.0\AiWorkspace.Domain.sourcelink.json
+C:\Users\Usuário\Source\Repos\ai-workspace\backend\src\AiWorkspace.Domain\bin\Debug\net9.0\AiWorkspace.Domain.deps.json
+C:\Users\Usuário\Source\Repos\ai-workspace\backend\src\AiWorkspace.Domain\bin\Debug\net9.0\AiWorkspace.Domain.dll
+C:\Users\Usuário\Source\Repos\ai-workspace\backend\src\AiWorkspace.Domain\bin\Debug\net9.0\AiWorkspace.Domain.pdb
+C:\Users\Usuário\Source\Repos\ai-workspace\backend\src\AiWorkspace.Domain\obj\Debug\net9.0\AiWorkspace.Domain.csproj.AssemblyReference.cache
+C:\Users\Usuário\Source\Repos\ai-workspace\backend\src\AiWorkspace.Domain\obj\Debug\net9.0\AiWorkspace.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuário\Source\Repos\ai-workspace\backend\src\AiWorkspace.Domain\obj\Debug\net9.0\AiWorkspace.Domain.AssemblyInfoInputs.cache
+C:\Users\Usuário\Source\Repos\ai-workspace\backend\src\AiWorkspace.Domain\obj\Debug\net9.0\AiWorkspace.Domain.AssemblyInfo.cs
+C:\Users\Usuário\Source\Repos\ai-workspace\backend\src\AiWorkspace.Domain\obj\Debug\net9.0\AiWorkspace.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Usuário\Source\Repos\ai-workspace\backend\src\AiWorkspace.Domain\obj\Debug\net9.0\AiWorkspace.Domain.sourcelink.json
+C:\Users\Usuário\Source\Repos\ai-workspace\backend\src\AiWorkspace.Domain\obj\Debug\net9.0\AiWorkspace.Domain.dll
+C:\Users\Usuário\Source\Repos\ai-workspace\backend\src\AiWorkspace.Domain\obj\Debug\net9.0\refint\AiWorkspace.Domain.dll
+C:\Users\Usuário\Source\Repos\ai-workspace\backend\src\AiWorkspace.Domain\obj\Debug\net9.0\AiWorkspace.Domain.pdb
+C:\Users\Usuário\Source\Repos\ai-workspace\backend\src\AiWorkspace.Domain\obj\Debug\net9.0\ref\AiWorkspace.Domain.dll
