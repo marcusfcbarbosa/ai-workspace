@@ -2,23 +2,30 @@
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
+using AiWorkspace.Api.Authentication;
 using AiWorkspace.Application.Interfaces;
+using AiWorkspace.Application.Orchestration;
 using AiWorkspace.Domain.Entities;
+using AiWorkspace.Infrastructure.Agents;
 using AiWorkspace.Infrastructure.AI;
 using AiWorkspace.Infrastructure.Persistence;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using AiWorkspace.Api.Authentication;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
+
+builder.Services.AddHttpClient("BankingMcp", client =>
+{
+    client.BaseAddress = new Uri("http://127.0.0.1:5083/");
+    client.Timeout = TimeSpan.FromSeconds(5);
+});
 
 builder.Services.AddCors(options =>
 {
@@ -32,6 +39,14 @@ builder.Services.AddCors(options =>
 
 builder.Services.AddScoped<IOnboardingAgent, OnboardingAgent>();
 
+builder.Services.AddScoped<IAccountAgent, AccountAgent>();
+builder.Services.AddScoped<IFraudAgent, FraudAgent>();
+builder.Services.AddScoped<IComplianceAgent, ComplianceAgent>();
+builder.Services.AddScoped<ILedgerAgent, LedgerAgent>();
+
+builder.Services.AddScoped<ILedgerRepository, LedgerRepository>();
+builder.Services.AddScoped<IBankingOrchestrator, BankingOrchestrator>();
+
 var connectionString = builder.Configuration
     .GetConnectionString("DefaultConnection");
 
@@ -44,6 +59,15 @@ if (string.IsNullOrWhiteSpace(connectionString))
 builder.Services.AddDbContext<AuthDbContext>(options =>
 {
     options.UseSqlite(connectionString);
+});
+
+builder.Services.AddDbContext<LedgerDbContext>(options =>
+{
+    var ledgerConnectionString = builder.Configuration
+        .GetConnectionString("LedgerConnection")
+        ?? "Data Source=ledger.db";
+
+    options.UseSqlite(ledgerConnectionString);
 });
 
 builder.Services

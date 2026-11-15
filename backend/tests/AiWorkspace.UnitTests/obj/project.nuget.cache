@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mD6pBJGk3gk=",
+  "dgSpecHash": "mCu3v00OEN0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Usuário\\source\\repos\\ai-workspace\\backend\\tests\\AiWorkspace.UnitTests\\AiWorkspace.UnitTests.csproj",
+  "projectFilePath": "C:\\Users\\Usuário\\Source\\Repos\\ai-workspace\\backend\\tests\\AiWorkspace.UnitTests\\AiWorkspace.UnitTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Usuário\\.nuget\\packages\\coverlet.collector\\6.0.2\\coverlet.collector.6.0.2.nupkg.sha512",
     "C:\\Users\\Usuário\\.nuget\\packages\\microsoft.codecoverage\\17.11.1\\microsoft.codecoverage.17.11.1.nupkg.sha512",
