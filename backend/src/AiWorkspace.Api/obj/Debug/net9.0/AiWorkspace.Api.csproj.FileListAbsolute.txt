@@ -370,3 +370,5 @@ C:\Users\Usuário\Source\Repos\ai-workspace\backend\src\AiWorkspace.Api\obj\Debu
 C:\Users\Usuário\Source\Repos\ai-workspace\backend\src\AiWorkspace.Api\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
 C:\Users\Usuário\Source\Repos\ai-workspace\backend\src\AiWorkspace.Api\obj\Debug\net9.0\staticwebassets.build.json.cache
 C:\Users\Usuário\Source\Repos\ai-workspace\backend\src\AiWorkspace.Api\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+C:\Users\Usuário\source\repos\ai-workspace\backend\src\AiWorkspace.Api\bin\Debug\net9.0\ModelContextProtocol.dll
+C:\Users\Usuário\source\repos\ai-workspace\backend\src\AiWorkspace.Api\bin\Debug\net9.0\ModelContextProtocol.Core.dll
