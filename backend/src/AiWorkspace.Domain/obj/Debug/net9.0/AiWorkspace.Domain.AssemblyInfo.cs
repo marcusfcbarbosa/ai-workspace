@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AiWorkspace.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+493ce2cae32e960c886f61f372b254376a7911a4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e760a8c11c341fdbfb48a4c02800b66eee82e9be")]
 [assembly: System.Reflection.AssemblyProductAttribute("AiWorkspace.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AiWorkspace.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
