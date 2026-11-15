@@ -2,18 +2,19 @@
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
+using AiWorkspace.Api.Authentication;
 using AiWorkspace.Application.Interfaces;
+using AiWorkspace.Application.Orchestration;
 using AiWorkspace.Domain.Entities;
+using AiWorkspace.Infrastructure.Agents;
 using AiWorkspace.Infrastructure.AI;
 using AiWorkspace.Infrastructure.Persistence;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using AiWorkspace.Api.Authentication;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -30,8 +31,22 @@ builder.Services.AddCors(options =>
     });
 });
 
+// AI Agents
 builder.Services.AddScoped<IOnboardingAgent, OnboardingAgent>();
 
+// Banking Agents
+builder.Services.AddScoped<IAccountAgent, AccountAgent>();
+builder.Services.AddScoped<IFraudAgent, FraudAgent>();
+builder.Services.AddScoped<IComplianceAgent, ComplianceAgent>();
+builder.Services.AddScoped<ILedgerAgent, LedgerAgent>();
+
+// Banking Persistence
+builder.Services.AddScoped<ILedgerRepository, LedgerRepository>();
+
+// Banking Orchestration
+builder.Services.AddScoped<IBankingOrchestrator, BankingOrchestrator>();
+
+// Database Configuration
 var connectionString = builder.Configuration
     .GetConnectionString("DefaultConnection");
 
@@ -41,11 +56,23 @@ if (string.IsNullOrWhiteSpace(connectionString))
         "Database connection string 'DefaultConnection' is missing.");
 }
 
+// Authentication Database
 builder.Services.AddDbContext<AuthDbContext>(options =>
 {
     options.UseSqlite(connectionString);
 });
 
+// Banking Ledger Database
+builder.Services.AddDbContext<LedgerDbContext>(options =>
+{
+    var ledgerConnectionString = builder.Configuration
+        .GetConnectionString("LedgerConnection")
+        ?? "Data Source=ledger.db";
+
+    options.UseSqlite(ledgerConnectionString);
+});
+
+// Identity Configuration
 builder.Services
     .AddIdentityCore<ApplicationUser>(options =>
     {
@@ -58,6 +85,7 @@ builder.Services
     })
     .AddEntityFrameworkStores<AuthDbContext>();
 
+// JWT Configuration
 var jwtKey = builder.Configuration["Jwt:SigningKey"];
 
 if (string.IsNullOrWhiteSpace(jwtKey) ||
@@ -76,6 +104,7 @@ var jwtAudience = builder.Configuration["Jwt:Audience"]
 var signingKey = new SymmetricSecurityKey(
     Encoding.UTF8.GetBytes(jwtKey));
 
+// Authentication Configuration
 var authentication = builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = "ApplicationAuth";
@@ -154,6 +183,7 @@ authentication.AddJwtBearer(
         };
     });
 
+// Development Authentication
 if (builder.Environment.IsDevelopment())
 {
     authentication.AddScheme<
@@ -165,6 +195,7 @@ if (builder.Environment.IsDevelopment())
 
 builder.Services.AddAuthorization();
 
+// Swagger Configuration
 builder.Services.AddSwaggerGen(options =>
 {
     options.AddSecurityDefinition(
@@ -199,6 +230,7 @@ builder.Services.AddSwaggerGen(options =>
 
 var app = builder.Build();
 
+// HTTP Pipeline
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();

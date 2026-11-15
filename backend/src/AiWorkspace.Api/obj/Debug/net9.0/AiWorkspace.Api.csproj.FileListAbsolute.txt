@@ -369,4 +369,3 @@ C:\Users\Usuário\Source\Repos\ai-workspace\backend\src\AiWorkspace.Api\obj\Debu
 C:\Users\Usuário\Source\Repos\ai-workspace\backend\src\AiWorkspace.Api\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
 C:\Users\Usuário\Source\Repos\ai-workspace\backend\src\AiWorkspace.Api\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
 C:\Users\Usuário\Source\Repos\ai-workspace\backend\src\AiWorkspace.Api\obj\Debug\net9.0\staticwebassets.build.json.cache
-C:\Users\Usuário\Source\Repos\ai-workspace\backend\src\AiWorkspace.Api\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
