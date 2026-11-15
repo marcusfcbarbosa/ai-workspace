@@ -1,5 +1,7 @@
 ﻿using AiWorkspace.Application.Interfaces;
+using AiWorkspace.Domain.Entities;
 using AiWorkspace.Infrastructure.AI;
+using AiWorkspace.Infrastructure.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -24,6 +26,18 @@ builder.Services.AddHttpClient<IOnboardingAgent, OnboardingAgent>(
         client.Timeout = TimeSpan.FromSeconds(60);
     });
 
+builder.Services
+    .AddIdentityCore<ApplicationUser>(options =>
+    {
+        options.User.RequireUniqueEmail = true;
+
+        options.Password.RequiredLength = 12;
+        options.Password.RequireDigit = true;
+        options.Password.RequireUppercase = true;
+        options.Password.RequireLowercase = true;
+        options.Password.RequireNonAlphanumeric = true;
+    })
+    .AddEntityFrameworkStores<AuthDbContext>();
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
