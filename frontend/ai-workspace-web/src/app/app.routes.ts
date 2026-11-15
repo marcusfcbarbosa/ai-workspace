@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+
 import { MainLayout } from './layout/main-layout/main-layout';
 
 export const routes: Routes = [
@@ -10,7 +11,7 @@ export const routes: Routes = [
         path: '',
         loadComponent: () =>
           import('./features/dashboard/dashboard').then(
-            (m) => m.Dashboard
+            (m) => m.Dashboard,
           ),
         title: 'Dashboard | AI Banking Workspace',
       },
@@ -18,7 +19,7 @@ export const routes: Routes = [
         path: 'assistant',
         loadComponent: () =>
           import('./features/ai-assistant/ai-assistant').then(
-            (m) => m.AiAssistant
+            (m) => m.AiAssistant,
           ),
         title: 'AI Assistant | AI Banking Workspace',
       },
@@ -26,7 +27,7 @@ export const routes: Routes = [
         path: 'accounts',
         loadComponent: () =>
           import('./features/accounts/accounts').then(
-            (m) => m.Accounts
+            (m) => m.Accounts,
           ),
         title: 'Accounts | AI Banking Workspace',
       },
@@ -34,7 +35,7 @@ export const routes: Routes = [
         path: 'transfers',
         loadComponent: () =>
           import('./features/transfers/transfers').then(
-            (m) => m.Transfers
+            (m) => m.Transfers,
           ),
         title: 'Transfers | AI Banking Workspace',
       },
@@ -42,7 +43,7 @@ export const routes: Routes = [
         path: 'agents',
         loadComponent: () =>
           import('./features/agents/agents').then(
-            (m) => m.Agents
+            (m) => m.Agents,
           ),
         title: 'AI Agents | AI Banking Workspace',
       },
@@ -50,7 +51,7 @@ export const routes: Routes = [
         path: 'mcp-tools',
         loadComponent: () =>
           import('./features/mcp-tools/mcp-tools').then(
-            (m) => m.McpTools
+            (m) => m.McpTools,
           ),
         title: 'MCP Tools | AI Banking Workspace',
       },

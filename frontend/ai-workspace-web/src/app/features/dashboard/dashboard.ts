@@ -11,27 +11,32 @@ export class Dashboard {
   readonly capabilities = [
     {
       title: 'Onboarding Agent',
-      description: 'Customer onboarding and account opening guidance.',
+      description:
+        'Customer onboarding and account opening guidance.',
       icon: '◈',
     },
     {
       title: 'Account Agent',
-      description: 'Bank account operations and account information.',
-      icon: '▤',
+      description:
+        'Bank account operations and account information.',
+      icon: '¤',
     },
     {
       title: 'Fraud Agent',
-      description: 'Fraud assessment and transaction risk evaluation.',
+      description:
+        'Fraud assessment and transaction risk evaluation.',
       icon: '◇',
     },
     {
       title: 'Compliance Agent',
-      description: 'Compliance checks and regulatory workflows.',
+      description:
+        'Compliance checks and regulatory workflows.',
       icon: '✓',
     },
     {
       title: 'Ledger Agent',
-      description: 'Transaction records and ledger operations.',
+      description:
+        'Transaction records and ledger operations.',
       icon: '⇄',
     },
   ];

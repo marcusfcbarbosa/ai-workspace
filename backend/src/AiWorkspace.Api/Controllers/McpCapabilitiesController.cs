@@ -6,7 +6,7 @@ using ModelContextProtocol.Client;
 namespace AiWorkspace.Api.Controllers;
 
 [ApiController]
-[Authorize]
+//[Authorize]
 [Route("api/mcp")]
 public sealed class McpCapabilitiesController : ControllerBase
 {

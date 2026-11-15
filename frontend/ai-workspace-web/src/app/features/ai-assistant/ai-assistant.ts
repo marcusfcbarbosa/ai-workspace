@@ -1,7 +1,9 @@
 import { Component, inject, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
 import { DatePipe } from '@angular/common';
+
+import { ApiService } from '../../core/services/api.service';
+import { environment } from '../../../environments/environment';
 
 interface ChatMessage {
   role: 'user' | 'assistant';
@@ -22,7 +24,7 @@ interface ChatResponse {
   templateUrl: './ai-assistant.html',
 })
 export class AiAssistant {
-  private readonly http = inject(HttpClient);
+  private readonly apiService = inject(ApiService);
 
   readonly messages = signal<ChatMessage[]>([
     {
@@ -57,8 +59,11 @@ export class AiAssistant {
     this.error.set('');
     this.loading.set(true);
 
-    this.http
-      .post<ChatResponse>('/api/agents/chat', { message })
+    this.apiService
+      .post<ChatResponse>(
+        environment.api.chat,
+        { message },
+      )
       .subscribe({
         next: (result) => {
           this.messages.update((current) => [
@@ -73,10 +78,11 @@ export class AiAssistant {
 
           this.loading.set(false);
         },
+
         error: (err) => {
           this.error.set(
             err.error?.message ??
-              'Unable to communicate with the Banking API. Please verify that the backend is running.'
+              'Unable to communicate with the Banking API. Please verify that the backend is running.',
           );
 
           this.loading.set(false);

@@ -21,5 +21,6 @@ export class Transfers {
     this.sourceAccountId.set('');
     this.destinationAccountId.set('');
     this.amount.set(null);
+    this.currency.set('USD');
   }
 }

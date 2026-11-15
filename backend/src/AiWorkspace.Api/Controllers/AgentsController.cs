@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace AiWorkspace.Api.Controllers;
 
 [ApiController]
-[Authorize]
+//[Authorize]
 [Route("api/agents")]
 public sealed class AgentsController : ControllerBase
 {
