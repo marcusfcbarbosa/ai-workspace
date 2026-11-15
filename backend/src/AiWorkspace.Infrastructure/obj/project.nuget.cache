@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "usUJzkfRoRY=",
+  "dgSpecHash": "/Ie92dabYO0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Usuário\\Source\\Repos\\ai-workspace\\backend\\src\\AiWorkspace.Infrastructure\\AiWorkspace.Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\Usuário\\source\\repos\\ai-workspace\\backend\\src\\AiWorkspace.Infrastructure\\AiWorkspace.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Usuário\\.nuget\\packages\\fluentvalidation\\12.2.0\\fluentvalidation.12.2.0.nupkg.sha512",
     "C:\\Users\\Usuário\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

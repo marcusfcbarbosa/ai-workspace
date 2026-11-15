@@ -1,12 +1,1 @@
-{
-  "Version": 1,
-  "Hash": "1Gni98NSpxFuu3KTmqX/fxg/8sDdMJDETh9gYnsz8Lw=",
-  "Source": "AiWorkspace.McpServer",
-  "BasePath": "_content/AiWorkspace.McpServer",
-  "Mode": "Default",
-  "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
-}
+{"Version":1,"Hash":"1Gni98NSpxFuu3KTmqX/fxg/8sDdMJDETh9gYnsz8Lw=","Source":"AiWorkspace.McpServer","BasePath":"_content/AiWorkspace.McpServer","Mode":"Default","ManifestType":"Build","ReferencedProjectsConfiguration":[],"DiscoveryPatterns":[],"Assets":[],"Endpoints":[]}
