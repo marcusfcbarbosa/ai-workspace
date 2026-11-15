@@ -30,11 +30,7 @@ builder.Services.AddCors(options =>
     });
 });
 
-builder.Services.AddHttpClient<IOnboardingAgent, OnboardingAgent>(
-    client =>
-    {
-        client.Timeout = TimeSpan.FromSeconds(60);
-    });
+builder.Services.AddScoped<IOnboardingAgent, OnboardingAgent>();
 
 var connectionString = builder.Configuration
     .GetConnectionString("DefaultConnection");
