@@ -1,0 +1,33 @@
+<header class="sticky top-0 z-30 border-b border-slate-200 bg-white/95 backdrop-blur">
+  <div class="flex h-20 items-center justify-between px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center gap-4">
+      <button
+        type="button"
+        class="rounded-lg p-2 text-slate-600 hover:bg-slate-100 lg:hidden"
+        aria-label="Open navigation"
+        (click)="menuClick.emit()"
+      >
+        ☰
+      </button>
+
+      <div>
+        <p class="text-sm font-semibold text-slate-900">
+          AI Banking Workspace
+        </p>
+        <p class="text-xs text-slate-500">
+          Intelligent banking operations
+        </p>
+      </div>
+    </div>
+
+    <div class="flex items-center gap-3">
+      <span class="hidden rounded-full bg-amber-50 px-3 py-1 text-xs font-medium text-amber-700 sm:inline-flex">
+        Development
+      </span>
+
+      <div class="flex h-10 w-10 items-center justify-center rounded-full bg-blue-100 text-sm font-bold text-blue-700">
+        AI
+      </div>
+    </div>
+  </div>
+</header>
