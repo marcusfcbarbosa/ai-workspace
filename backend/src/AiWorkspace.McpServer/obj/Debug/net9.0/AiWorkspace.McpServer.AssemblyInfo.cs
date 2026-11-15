@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AiWorkspace.McpServer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cf63c27dd101ba94d92eacb86702d72e81019762")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+75b9c50fdfc7150924f3c83240d6f8ad4e7e2896")]
 [assembly: System.Reflection.AssemblyProductAttribute("AiWorkspace.McpServer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AiWorkspace.McpServer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
