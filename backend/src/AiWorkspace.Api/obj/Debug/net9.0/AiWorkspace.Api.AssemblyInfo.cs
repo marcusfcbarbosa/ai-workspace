@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AiWorkspace.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+347821c5e0c631dbe137dd96caeaf8c0e6ea8ea8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cf63c27dd101ba94d92eacb86702d72e81019762")]
 [assembly: System.Reflection.AssemblyProductAttribute("AiWorkspace.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AiWorkspace.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
