@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AiWorkspace.IntegrationTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6c5c89bba453934fd2afda066c6cbd5de5fe297c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+347821c5e0c631dbe137dd96caeaf8c0e6ea8ea8")]
 [assembly: System.Reflection.AssemblyProductAttribute("AiWorkspace.IntegrationTests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AiWorkspace.IntegrationTests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

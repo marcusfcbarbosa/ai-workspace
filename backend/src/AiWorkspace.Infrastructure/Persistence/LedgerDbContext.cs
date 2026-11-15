@@ -1,5 +1,6 @@
 ﻿
 using System.Globalization;
+using AiWorkspace.Domain.Accounts;
 using AiWorkspace.Domain.Ledger;
 using Microsoft.EntityFrameworkCore;
 
@@ -18,6 +19,9 @@ public sealed class LedgerDbContext : DbContext
 
     public DbSet<LedgerTransaction> LedgerTransactions =>
         Set<LedgerTransaction>();
+
+    public DbSet<BankAccount> BankAccounts =>
+        Set<BankAccount>();
 
     protected override void OnModelCreating(
         ModelBuilder modelBuilder)
@@ -108,6 +112,44 @@ public sealed class LedgerDbContext : DbContext
 
             entity.Property(transaction => transaction.CreatedAt)
                 .IsRequired();
+        });
+
+        modelBuilder.Entity<BankAccount>(entity =>
+        {
+            entity.ToTable("BankAccounts");
+
+            entity.HasKey(account => account.Id);
+
+            entity.Property(account => account.OwnerId)
+                .IsRequired();
+
+            entity.Property(account => account.Currency)
+                .HasMaxLength(3)
+                .IsRequired();
+
+            entity.Property(account => account.Balance)
+                .HasConversion(
+                    balance => balance.ToString(
+                        CultureInfo.InvariantCulture),
+                    value => decimal.Parse(
+                        value,
+                        CultureInfo.InvariantCulture))
+                .HasColumnType("TEXT")
+                .IsRequired();
+
+            entity.Property(account => account.IsActive)
+                .IsRequired();
+
+            entity.Property(account => account.CreatedAt)
+                .IsRequired();
+
+            entity.HasIndex(account => account.OwnerId);
+
+            entity.HasIndex(account => new
+            {
+                account.OwnerId,
+                account.Currency
+            });
         });
     }
 }
